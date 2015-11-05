@@ -1,0 +1,26 @@
+PaymentGateway:
+  environment:
+    'dev'
+
+PaymentProcessor:
+  supported_methods:
+    dev:
+      - 'PayPalExpress'
+    live:
+      - 'PayPalExpress'
+
+PayPalGateway_Express: 
+  dev:
+    authentication:
+      username: 'brett.tasker-facilitator_api1.gmail.com'
+      password: 'HQ68ZVKXSUK4DW5X'
+      signature: 'AFcWxV21C7fd0v3bYYYRCpSSRl31AuJDRiPxx2W.1w4aT2l50lyaKspn'
+  live:
+    authentication:
+      username: 'brett.tasker_api1.gmail.com'
+      password: 'C9NCP722YQUHBWNZ'
+      signature: 'AG7TkkNEX3557qAhXM2SphHqGheNAM1PaWQHf6tcg3EnUMiqpoYr8GyP'
+
+Payment:
+  extensions:
+    - PaymentExtension
